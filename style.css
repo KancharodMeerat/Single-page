@@ -1,6 +1,4 @@
-*{
-    border: 1px solid red;
-}
+
 body {
     line-height: 1.6;
     margin: 0;
@@ -420,7 +418,7 @@ button:hover{
 
 @media (max-width: 1024px) {
     .recommend {
-        grid-template-columns: 1fr; /* เปลี่ยน layout เป็น 1 คอลัมน์ */
+        grid-template-columns: 1fr; 
     }
 
     .steps-mix {
@@ -436,7 +434,7 @@ button:hover{
     }
 
     .pricing {
-        grid-template-columns: repeat(2, 1fr);; /* เปลี่ยน layout เป็น 1 คอลัมน์ */
+        grid-template-columns: repeat(2, 1fr);
     }
 
     footer {
