@@ -1,9 +1,8 @@
-/* *{
+*{
     border: 1px solid red;
-} */
+}
  
 body {
-    line-height: 1.6;
     margin: 0;
     padding: 0;
     color: #333;
@@ -79,7 +78,6 @@ nav a {
     color: #292929;
     transition: color 0.3s;
     align-content: center;
-    height: 23px;
     font-size: 20px;
     font-weight: 400;
 }
@@ -144,6 +142,20 @@ nav a:hover {
     text-align: left;
 }
 
+.hamburger-menu button {
+    background: #01996D;
+    color: #ffffff;
+    border-radius: 4px;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+}
+
+.hamburger-menu button:hover{
+    background-color: #45c39f;
+    color: #ffffff;
+}
+
 .welcome {
     color: #060606;
     text-align: center;
@@ -159,11 +171,12 @@ nav a:hover {
 
 .welcome-overlay {
     position: absolute;
-    top: 175px;
+    top: 50%;
     left: 60px;
     max-width: 460px;
     height: 384px;
     width: 100%;
+    transform: translate(60px, -50%);
 }
 
 .welcome h1 {
@@ -219,7 +232,7 @@ nav a:hover {
     font-size: 24px;
 }
 
- .why-alivio-mix {
+.why-alivio-mix {
     /* padding: 169px 60px 60px 51px; */
     display: grid;
     max-width: 1320px;
@@ -345,15 +358,16 @@ nav a:hover {
 /* Community */
 .community-mix {
     background-color: #245852;
-    height: 922px;
+    /* height: 922px; */
     /* align-items: center; */
-    padding: 0 60px;
+    /* padding: 0 60px; */
 }
 
 .community-grid {
     display: grid;
     grid-template-columns: 551px 747px;
     gap: 22px;
+    justify-content: center;
 }
 
 .community {
@@ -370,6 +384,7 @@ nav a:hover {
     font-weight: 700;
     line-height: 78px;
     margin-top: 310px;
+    margin-bottom: 33px;
 }
 
 .community p {
@@ -378,7 +393,8 @@ nav a:hover {
     font-family: "Lato";
     font-weight: 600;
     line-height: 39px;
-    margin: 33px 0 57px;
+    margin-bottom: 57px;
+    margin-top: 0;
 }
 
 .community button {
@@ -397,7 +413,8 @@ nav a:hover {
 .community-img {
     position: relative;
     height: fit-content;
-    margin-top: 229px;
+    /* margin-top: 229px;  */
+    top: 229px;
 }
 
 .image-video {
@@ -417,13 +434,15 @@ nav a:hover {
     transform: translate(50%, -50%);
 }
 
-.profile {
+.profile-mix {
     display: grid;
     grid-template-columns: 638px 584px;
     gap: 97px;
     /* align-items: center; */
     margin: 120px 60px 0 60px;
     position: relative;
+    justify-content: center;
+    margin: 120px 60px 390px;
 }
 
 .customized-mini {
@@ -453,7 +472,6 @@ nav a:hover {
 .customized-mini {
     font-size: 18px;
     font-weight: bold;
-    margin: 10px 0;
     max-width: 296px;
     height: 293px;
     width: 100%;
@@ -463,11 +481,19 @@ nav a:hover {
     text-align: center;
 }
 
+.customized-mini.line {
+    border-bottom: 0.75px solid black;
+    display: inline-block;
+}
+
 .customized-mini h1 {
     font-weight: 600;
     font-family: "Lato";
     font-size: 14px;
     margin-top: 22px;
+    
+    border-bottom: 0.75px solid black;
+    display: inline-block;
 }
 
 .customized-mini p {
@@ -500,12 +526,16 @@ nav a:hover {
 }
 
 .profile-img {
-    width: 638px;
+    max-width: 638px;
+    width: 100%;
     height: 573px;
     border-radius: 18px;
     object-fit: fill;
-    /* max-width: 100%; */
     object-fit: cover;
+}
+
+.profile { 
+    position: relative;
 }
 
 .customized {
@@ -553,7 +583,6 @@ nav a:hover {
     height: 65px;
     font-weight: 400;
     line-height: 25px;
-    margin-bottom: 390px;
 }
 
 .customized button:hover {
@@ -562,11 +591,11 @@ nav a:hover {
 
 /* footer */
 .footer {
-    width: 100%;
-    height: 654px;
+    /* width: 100%; */
+    /* height: 654px; */
     background-color: #245852;
     color: white;
-    padding: 20px 0;
+    padding: 92px 60px;
     display: flex;
     justify-content: flex-start;
 }
@@ -581,12 +610,17 @@ nav a:hover {
     color: white;
     text-decoration: none;
     font-size: 25px;
-    padding: 0px 60px 59px;
+    /* padding: 0px 60px 59px; */
     font-family: "Lato";
+    margin-bottom: 59px;
+    font-weight: 600;
 }
 
 .footer-list img {
-    padding: 95px 60px 59px;
+    margin-bottom: 59px;
+    max-width: 107px;
+    height: 31px;
+    width: 100%;
 }
 
 .footer-list a:hover {
@@ -596,27 +630,99 @@ nav a:hover {
 
 /* mobile */
 @media (min-width: 375px) and (max-width: 767px) {
+
     .nav-links, .nav-login {
         display: none;
     }
 
+    .welcome img {
+        max-width: 767px;
+        height: 400px;
+        object-fit: cover;
+        width: 100%;
+    }
+    
+    .welcome-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        max-width: 300px;
+        width: 100%;
+        height: 360px;
+        transform: translate(-50%, -50%);
+    }
+    
+    .welcome h1 {
+        font-size: 40px;
+        line-height: 53px;    
+    }
+    
+    .welcome p {
+        font-size: 15px;
+        max-width: 400px;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .welcome button {
+        padding: 10px;
+        display: flex;
+        font-size: 15px;
+        max-width: 150px;
+        height: 50px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .why-alivio-mix {
+        display: grid;
+        max-width: 350px;
+        margin: 120px auto;
+        width: 100%;
+    }
+    
+    .why-alivio-mix p {
+        margin: 0;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .how-it {
+        max-width: 141px;
+        width: 100%;
+    }
+    
+    .recommend h2 {
+        font-size: 40px;
+        line-height: 59px;
+    }
+
     .recommend {
         grid-template-columns: 1fr;
-        text-align: center;
-        gap: 10px;  
-        justify-content: center;  
+        gap: 10px;
+        justify-content: center;
+        max-width: 350px;
+        width: 100%;
     }
 
     .recommend p {
-        max-width: 671px;
-        height: 135px;
+        max-width: 400px;
+        height: auto;
         width: 100%;
-        justify-content: center;
-        margin: 0 auto;
+        font-size: 18px;
+    }
+
+    .steps {
+        max-width: 350px;
+    }
+
+    .steps-mix img {
+        max-width: 300px;
+        height: 400px;
     }
 
     .steps-mix {
-        grid-template-columns: repeat(1, 390px);
+        grid-template-columns: repeat(1, auto);
         /* max-width: 700px; */
         margin: 0 auto;
         text-align: center;
@@ -627,6 +733,8 @@ nav a:hover {
         max-width: 500px;
         margin: auto;
         padding-bottom: 20px;
+        font-size: 18px;
+        text-align: start;
     }
 
     .steps.step-margin-two, .steps.step-margin-three {
@@ -634,28 +742,41 @@ nav a:hover {
     }
 
     .community {
-        justify-content: center;
+        max-width: 767px;
+        width: 100%;
     }
 
     .community-mix {
-        padding: 0px;
+        padding: 100px 30px;
         justify-content: center;
         display: flex;
     }
 
     .community h2 {
-        margin-top: 25px;
+        margin: 0px;
+        font-size: 40px;
+        line-height: 55px;
+    }
+
+    .community p {
+        font-size: 20px;
+        margin: 50px 0;
     }
 
     .community-img {
-        margin: 0 auto;    
+        margin: 0 auto; 
+        top: 20px;   
+    }
+
+    .community button {
+        width: 200px;
+        height: 60px;
     }
 
     .image-video {
-        height: 430px;
-        max-width: 650px;
+        height: 300px;
+        max-width: 400px;
         width: 100%;
-        margin-bottom: 20px;
     }
 
     .community-grid {
@@ -664,7 +785,7 @@ nav a:hover {
 
     .profile-img {
         max-width: 400px;
-        height: 573px;
+        height: 383px;
         width: 100%;
     }
 
@@ -672,40 +793,71 @@ nav a:hover {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .profile {
+    .profile-mix {
         grid-template-columns: repeat(1, auto);
-        gap: 150px;
+        gap: 200px;
+        margin: 120px 30px 290px;
+    }
+
+    .customized-mini {
+        font-size: 18px;
+        font-weight: bold;
+        max-width: 250px;
+        height: 253px;
+        width: 100%;
+        top: 70%;
+        left: -14px;
+    }
+
+    .customized h1 {
+        font-size: 40px;
+        line-height: 55px;
     }
 
     .customized {
         text-align: left;
     }
 
-    footer {
-        max-width: 100%;
+    .footer {
+        padding: 92px 30px;
     }
+
+    .footer-list a {
+        font-size: 23px;
+    }
+
 }
 
 /* tablet */
 @media (min-width: 768px) and (max-width: 1279px) {
 
+    .logo{
+        width: 69px;
+    }
+
     .nav-links, .nav-login {
         display: none;
     }
 
-    .recommend {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 10px;  
-        justify-content: center;  
+    .why-alivio-mix {
+        padding: 0px 30px;
+        margin-top: 120px;
+        width: calc(100% - 60px);
+        justify-content: center;
+        margin-bottom: 0;
     }
 
-    .recommend p {
-        max-width: 671px;
-        height: 135px;
+    .how-it {
+        max-width: 141px;
         width: 100%;
+    }
+
+    .recommend {
+        grid-template-columns: 1fr;
+        gap: 10px;
         justify-content: center;
-        margin: 0 auto;
+        max-width: 671px;
+        width: 100%;
     }
 
     .steps-mix {
@@ -726,34 +878,34 @@ nav a:hover {
     }
 
     .community {
-        justify-content: center;
+        margin-top: 100px;
     }
 
     .community-mix {
-        padding: 0px;
+        padding: 0px 60px 100px;
         justify-content: center;
         display: flex;
+        margin-top: 100px;
     }
 
     .community h2 {
-        margin-top: 25px;
+        margin-top: 0px;
     }
 
     .community-img {
-        margin: 0 auto;    
+        margin: 0 auto;
+        top: 20px;
     }
 
     .image-video {
-        height: 430px;
-        max-width: 650px;        
-        border-radius: 16px;
-        object-fit: cover;
+        height: 430px; 
+        max-width: 650px;
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: px;
     }
 
     .community-grid {
-        grid-template-columns: repeat(1, 747px);
+        grid-template-columns: repeat(1, auto);
     }
 
     .pricing {
@@ -766,10 +918,10 @@ nav a:hover {
         width: 100%;
     }
 
-    .profile {
+    .profile-mix {
         grid-template-columns: repeat(1, 638px);
         gap: 97px;
-        margin: 120px 60px 0 60px;
+        margin: 120px 60px 120px;
         justify-content: center;
     }
 
